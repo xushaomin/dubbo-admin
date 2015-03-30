@@ -11,7 +11,7 @@
 		class="com.appleframework.config.diamond.spring.ExtendedPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:system.properties</value>
+				<value>classpath*:system.properties</value>
 			</list>
 		</property>
 		<property name="loadDiamond" value="true" />
