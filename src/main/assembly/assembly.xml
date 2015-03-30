@@ -12,12 +12,10 @@
             <fileMode>0755</fileMode>
         </fileSet>
         <fileSet>
-            <directory>src/main/resources/</directory>
-            <outputDirectory>/conf</outputDirectory>
-            <excludes>  
-                <exclude>../META-INF/*/*.xml</exclude>
-            </excludes> 
-        </fileSet>
+			<directory>src/main/assembly/conf</directory>
+			<outputDirectory>conf</outputDirectory>
+			<fileMode>0644</fileMode>
+		</fileSet>
 
         <fileSet>
             <directory>src/main/webapp</directory>
