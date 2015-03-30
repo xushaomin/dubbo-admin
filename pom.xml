@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.alibaba</groupId>
 	<artifactId>dubbo-admin</artifactId>
-	<packaging>war</packaging>
 	<version>2.5.3-SNAPSHOT</version>
 	<name>dubbo-admin Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -191,14 +190,6 @@
 	</dependencies>
 	
 	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<excludes>
-					<exclude>**/*.properties</exclude>
-				</excludes>
-			</resource>
-		</resources>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -235,7 +226,6 @@
 						</includes>
 					</configuration>
 				</plugin>
-
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
@@ -319,7 +309,6 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -327,7 +316,7 @@
 					<encoding>UTF-8</encoding>  
 				</configuration>
 			</plugin>
-			
+			<!-- 
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
@@ -343,10 +332,8 @@
 					</execution>
 				</executions>
             </plugin>
-         	
-            
-		</plugins>
-		    
+             -->
+		</plugins>		    
 	</build>
 	
 	<distributionManagement>
