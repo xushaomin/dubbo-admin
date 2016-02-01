@@ -35,7 +35,8 @@ public class Logs extends Restful {
 
     private static final int SHOW_LOG_LENGTH = 30000;
 
-    public void index(Map<String, Object> context) throws Exception {
+    @SuppressWarnings("resource")
+	public void index(Map<String, Object> context) throws Exception {
         long size;
         String content;
         String modified;
