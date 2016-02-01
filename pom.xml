@@ -13,7 +13,7 @@
 		<zookeeper.version>3.3.3</zookeeper.version>
 		<zkclient.version>0.1</zkclient.version>
 		<slf4j.version>1.6.0</slf4j.version>
-		<boot.version>0.2.2.RELEASE</boot.version>
+		<boot.version>0.2.3.RELEASE</boot.version>
 		<config.version>0.1.5.RELEASE</config.version>
 	</properties>
 
