@@ -43,7 +43,7 @@ else
     LOGS_DIR=$DEPLOY_DIR/logs
 fi
 if [ ! -d $LOGS_DIR ]; then
-    mkdir $LOGS_DIR
+    mkdir -p $LOGS_DIR
 fi
 STDOUT_FILE=$LOGS_DIR/stdout.log
 
