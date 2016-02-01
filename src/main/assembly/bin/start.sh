@@ -12,10 +12,10 @@ DEPLOY_DIR=`pwd`
 CONF_DIR=$DEPLOY_DIR/conf
 
 SERVER_NAME=`sed '/application.name/!d;s/.*=//' conf/system.properties | tr -d '\r'`
-SERVER_PROTOCOL=`sed '/protocol.name/!d;s/.*=//' conf/system.properties | tr -d '\r'`
-SERVER_PORT=`sed '/protocol.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
+SERVER_PROTOCOL='web'
+SERVER_PORT=`sed '/web.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
 LOGS_FILE=`sed '/log4j.appender.logToFile.File/!d;s/.*=//' conf/log4j.properties | tr -d '\r'`
-JMX_PORT=`sed '/jmx.registry.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
+JMX_PORT=`sed '/jmx.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
 
 if [ -z "$SERVER_NAME" ]; then
     SERVER_NAME=`hostname`
@@ -72,7 +72,7 @@ JAVA_MEM_OPTS=" -server -Xmx1g -Xms512m -Xmn256m -XX:PermSize=128m -Xss256k -XX:
 
 
 echo -e "Starting the $SERVER_NAME ...\c"
-nohup java $JAVA_OPTS $JAVA_MEM_OPTS $JAVA_DEBUG_OPTS $JAVA_JMX_OPTS -classpath $CONF_DIR:$LIB_JARS com.appleframework.boot.jetty.SpringJettyMain env=$ENV > $STDOUT_FILE 2>&1 &
+nohup java $JAVA_OPTS $JAVA_MEM_OPTS $JAVA_DEBUG_OPTS $JAVA_JMX_OPTS -classpath $CONF_DIR:$LIB_JARS com.appleframework.boot.Main env=$ENV > $STDOUT_FILE 2>&1 &
 
 COUNT=0
 while [ $COUNT -lt 1 ]; do    
