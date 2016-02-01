@@ -13,8 +13,8 @@
 		<zookeeper.version>3.3.3</zookeeper.version>
 		<zkclient.version>0.1</zkclient.version>
 		<slf4j.version>1.6.0</slf4j.version>
-		<boot.version>0.1.1.RELEASE</boot.version>
-		<config.version>0.1.1.RELEASE</config.version>
+		<boot.version>0.2.2.RELEASE</boot.version>
+		<config.version>0.1.5.RELEASE</config.version>
 	</properties>
 
 	<dependencies>
@@ -198,8 +198,8 @@
 					<version>2.3.2</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>1.7</source>
+						<target>1.7</target>
 					</configuration>
 				</plugin>
 				<plugin>
