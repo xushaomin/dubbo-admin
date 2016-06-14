@@ -10,11 +10,11 @@
 	<properties>
 		<spring.version>3.2.3.RELEASE</spring.version>
 		<dubbo.version>2.5.3</dubbo.version>
-		<zookeeper.version>3.3.3</zookeeper.version>
-		<zkclient.version>0.1</zkclient.version>
+		<zookeeper.version>3.4.6</zookeeper.version>
+		<zkclient.version>0.8</zkclient.version>
 		<slf4j.version>1.6.1</slf4j.version>
 		<boot.version>0.2.5.RELEASE</boot.version>
-		<config.version>0.1.7.RELEASE</config.version>
+		<config.version>0.1.8.RELEASE</config.version>
 	</properties>
 
 	<dependencies>
@@ -118,7 +118,7 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.github.sgroschupf</groupId>
+			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
 			<version>${zkclient.version}</version>
 			<exclusions>
